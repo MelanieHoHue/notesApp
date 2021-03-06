@@ -1,4 +1,4 @@
- import dbConnect from '../../../utils/dbConnect'
+import dbConnect from '../../../utils/dbConnect'
 import Note from '../../../models/Note'
 
 dbConnect();
@@ -17,7 +17,7 @@ export default async (req, res) => {
             break;
         case 'POST':
             try {
-                const notes = await Note.create(req.body);
+                const note = await Note.create(req.body);
                 res.status(201).json({ success: true, data: note })
             } catch (error) {
                 res.status(400).json({ success: false})

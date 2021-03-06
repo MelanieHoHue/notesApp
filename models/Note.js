@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const NoteSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: [true, 'PLease add a title'],
+        required: [true, 'Please add a title'],
         unique: true,
         trim: true,
         maxlength: [40, 'Title can not be more than 40 characters']
